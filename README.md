@@ -6,7 +6,7 @@ También se implementan modelos de clasificación utilizando herramientas de Sci
 Objetivo del proyecto
 Desarrollar habilidades clave en el área de Ingeniería de Datos, aplicando técnicas fundamentales para preparar datasets reales antes de su análisis o modelado, incluyendo la transformación de variables, manejo de datos faltantes y visualización de patrones ocultos.
 
-🛠Herramientas utilizadas
+Herramientas utilizadas
 Python
 Librerías: pandas, numpy: Procesamiento y transformación de datos.
 
