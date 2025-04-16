@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head></head><body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div>
+
+
+
+<h1 class="title toc-ignore">Parcial Estadistica</h1>
+<h4 class="author">Camilo Andres Saballeth Lora</h4>
+<h4 class="date">2024-04-01</h4>
+
+</div>
+
+
+<center>
+Punto 1
+</center>
+<ol style="list-style-type: upper-alpha;">
+<li>&#191;Cuando es conveniente utilizar cada medida?</li>
+</ol>
+<p>En el caso de la <strong>media</strong>, que est&#225; siendo influenciada
+por todo el conjunto de datos incluidos los extremos, es necesario y
+conveniente sacar el resultado, recortando un porcentaje utilizando
+<strong>trim</strong>, para evitar incluir los datos extremos y que no
+afecten en gran medida el resultado general. La media recortada se
+calcula al arreglar los valores de la muestra en orden, “recortar” un
+n&#250;mero igual a partir de cada extremo y calcular la media de los
+restantes.</p>
+<p>En el caso de la mediana, para recoger sin excepcion todos los
+elementos del conjunto, se deberia separar cada conjunto de clase para
+sacar su mediana respectiva, para que se pueda analizar cada imformacion
+del conjunto de elementos</p>
+<p>En el caso de la moda, es conveniente cuando el conjunto de elementos
+ya sea variable o categoria, tiene m&#225;s frecuencia en una muestra</p>
+<p>Cuando se analizan datos categ&#243;ricos, la moda es el &#250;nico dato de
+tendencia central que puede utilizarse. Finalmente, la moda puede usarse
+como una medida de tendencia central para datos num&#233;ricos empleados en
+sentido categ&#243;rico.</p>
+<ol start="2" style="list-style-type: upper-alpha;">
+<li>Mediante un ejemplo relacionado con tu carrera explica cuando
+usar&#237;as la media y cuando usar&#237;as la mediana</li>
+</ol>
+<p>La media y la mediana se puede utilizar en la carrera de ingenieria
+Electr&#243;nica, en el siguiente ejemplo: Un conjunto de datos, que me
+recopile la cantidad de semestres que hace cada estudiante durante la
+carrera para graduarse.</p>
+<pre class="r"><code>library(summarytools)
+Semestres_estudiantes &lt;- c(12, 13, 16, 13, 12, 17, 18, 14, 15, 12, 11, 10, 17, 14, 13, 13, 12, 17, 18, 14, 16, 15, 17, 12, 14, 12, 13, 16, 13, 12, 17, 18, 14, 15, 12, 11, 10, 17, 14, 13, 13, 12, 17, 18, 14, 16, 15, 17, 12, 14, 12, 13, 16, 13, 12, 17, 18, 14, 15, 12, 11, 10, 12, 11, 10, 17, 14, 13, 13, 12, 17, 18, 14, 16, 15, 17, 12, 14)
+frecuencia&lt;-table(Semestres_estudiantes);frecuencia</code></pre>
+<pre><code>## Semestres_estudiantes
+## 10 11 12 13 14 15 16 17 18 
+##  4  4 16 12 12  6  6 12  6</code></pre>
+<pre class="r"><code>mean &lt;- mean(Semestres_estudiantes)
+round(mean)</code></pre>
+<pre><code>## [1] 14</code></pre>
+<pre class="r"><code>median(Semestres_estudiantes)</code></pre>
+<pre><code>## [1] 14</code></pre>
+<p>La moda es: <strong>12 semestres</strong> es la cantidad de semestres
+que mas se repite entre los maravillosos estudiantes del conjunto de
+datos sacados de mi mente</p>
+<p>promedio: Una vez redondeado el promedio para dar un valor mas exacto
+da como resultado <strong>14</strong>, que representa el promedio de
+semestres que necesitan los estudiantes en la carrera de ingenieria
+Electr&#243;nica para graduarce felizmente, con el conjunto de datos creados
+por mi mente.</p>
+<p>Mediana: Del conjunto de datos la mediana es 14, que es variable que
+est&#225; en la mitad del conjunto de datos</p>
+<center>
+Punto 2
+</center>
+<ol style="list-style-type: upper-alpha;">
+<li>&#191;Qu&#233; tipo de variables son m&#225;s adecuadas para ser representadas en
+una tabla de frecuencia para datos no agrupados?</li>
+</ol>
+<p>Las variables cualitativas y cuantitativas se pueden presentar en una
+tabla de frecuencias para datos no agrupados, pero dependiendo del
+conjunto de elementos, esto puede ser mas conveniente cambiar el tipo de
+tabla:</p>
+<ol style="list-style-type: decimal;">
+<li><p>Si el conjunto de datos cuantitativos es bastante extensa, es mas
+conveniente utilizar una tabla de frecuencia para datos
+agrupados</p></li>
+<li><p>Para un conjunto de elementos cualitativos seria conveniente
+utilizar una tabla de frecuencia para datos no agrupados</p></li>
+</ol>
+<ol start="2" style="list-style-type: upper-alpha;">
+<li>&#191;Cu&#225;l es la diferencia principal entre una tabla de frecuencia para
+datos no agrupados y una para datos agrupados?</li>
+</ol>
+<p>La tabla de frecuencia para datos agrupados presenta una agrupacion
+del conjunto de datos en la tabla, siguiendo la formula de la division
+para hallar la amplitud (el rango entre el total de clases). Para datos
+agrupados la frecuencia depende de la amplitud</p>
+<ol start="3" style="list-style-type: upper-alpha;">
+<li>Explica la importancia de mantener la misma amplitud de clase en una
+tabla de frecuencia para datos agrupados.</li>
+</ol>
+<p>Su importancia radica en que si no se utiliza, principalmente va a
+tener una distribucion no igualitaria entre el conjunto de datos, dando
+resultados que van a variar y no representar correctamente el conjunto
+de datos</p>
+<center>
+Punto 3
+</center>
+<p>Analice la simetr&#237;a y la curtosis en los siguientes gr&#225;ficos,
+explique cuales medidas me servir&#237;an de apoyo para realizar dicho
+an&#225;lisis.</p>
+<ol style="list-style-type: upper-alpha;">
+<li>Primero que todo, para dar un an&#225;lisis mas adecuado y preciso se
+necesita el conjunto de datos para analizar, ya que el profesor no nos
+brindo esa informacion,</li>
+</ol>
+<p>El grupo A: Su asimetria es negativa, ya que la media es menor que la
+moda. Kurtosis: Platicurtico</p>
+<p>El grupo B: Su asimetria es positiva, ya que la media es mayor que la
+moda. Kurtosis: Leptocurtico</p>
+<p>El grupo C: tiene una asimetria negativa, ya que la media es menor
+que la moda. Kurtosis: Mesocurtico</p>
+<p>Podemos partir que las medidas que necesito, son:</p>
+<p>Necesito de la tabla de frecuencia</p>
+<p>simetria: moda(se halla analizando que variable del conjunto de
+datos, se repite con mayor frecuencia), media(se halla sumando la
+cantidad total de datos sobre el numero total de datos)</p>
+<ol start="2" style="list-style-type: upper-alpha;">
+<li>Histograma X: Es simetrica, ya que la media y ma moda son
+parecidas</li>
+</ol>
+<p>Histograma Y: Es asimetrica positiva, porque la media es mayor que la
+moda</p>
+<center>
+Punto 4
+</center>
+<pre class="r"><code>library(readxl)
+Datos &lt;- read_excel(&quot;C:/Users/Estudiante/Desktop/Datos/Datos a trabajar.xlsx&quot;)
+Datos</code></pre>
+<pre><code>## # A tibble: 564 &#215; 8
+##    `No. De Cliente` Tiempo con presencia de fallos en ho…&#185; `Gasto en Kilovatios`
+##               &lt;dbl&gt;                                  &lt;dbl&gt;                 &lt;dbl&gt;
+##  1                1                                 0.183                   202.
+##  2                2                                 0.0147                  186.
+##  3                3                                 0.198                   198.
+##  4                4                                 2.39                    194.
+##  5                5                                 0.356                   209.
+##  6                6                                 1.74                    209.
+##  7                7                                 0.956                   214.
+##  8                8                                 0.835                   199.
+##  9                9                                 0.137                   206.
+## 10               10                                 1.75                    189.
+## # ℹ 554 more rows
+## # ℹ abbreviated name: &#185;​`Tiempo con presencia de fallos en hora`
+## # ℹ 5 more variables: `Longitud de Cables` &lt;dbl&gt;,
+## #   `N&#250;mero de Reparaciones` &lt;dbl&gt;, `Temperaturas &#176;C` &lt;dbl&gt;,
+## #   `Tiempo de atenci&#243;n en llamadas a lineas de atenci&#243;n` &lt;dbl&gt;,
+## #   `No. Llamadas recibidas por hora` &lt;dbl&gt;</code></pre>
+<pre class="r"><code>library(DescTools)
+Desc(Datos$`Longitud de Cables`, Datos$`N&#250;mero de Reparaciones`)</code></pre>
+<pre><code>## ------------------------------------------------------------------------------ 
+## 
+## 
+##      length          n       NAs    unique         0s       mean     meanCI&#39;
+##         564        564         0       = n          0  11.979022  10.845049
+##                 100.0%      0.0%                 0.0%             13.112996
+##                                                                            
+##         .05        .10       .25    median        .75        .90        .95
+##    1.554561   2.300051  3.857419  7.631768  13.831954  27.328048  38.714768
+##                                                                            
+##       range         sd     vcoef       mad        IQR       skew       kurt
+##   93.317274  13.710705  1.144560  6.570097   9.974535   2.851822  10.033931
+##                                                                            
+## lowest : 0.465836, 0.569908, 0.585007, 0.601911, 0.811622
+## highest: 78.764508, 84.233844, 85.11209, 87.978318, 93.78311
+## 
+## &#39; 95%-CI (classic)</code></pre>
+<p><img src="javascript://" width="672"/>
+Hay bastante datos extremos, su asimetria es positiva, ya que la media
+es mayor que la moda.</p>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="module" src="https://s.brightspace.com/lib/bsi/20.24.3-265/unbundled/mathjax.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+					if (document.querySelector('math') || /\$\$|\\\(|\\\[|\\begin{|\\ref{|\\eqref{/.test(document.body.innerHTML)) {
+						document.querySelectorAll('mspace[linebreak="newline"]').forEach(elm => {
+							elm.setAttribute('style', 'display: block; height: 0.5rem;');
+						});
+
+						window.D2L.MathJax.loadMathJax({
+							'outputScale': 1.5,
+							'renderLatex': false
+						});
+					}
+				});</script><script type="module" src="https://s.brightspace.com/lib/bsi/20.24.3-265/unbundled/prism.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+					document.querySelectorAll('.d2l-code').forEach(code => {
+						window.D2L.Prism.formatCodeElement(code);
+					});
+				});</script></body></html>
